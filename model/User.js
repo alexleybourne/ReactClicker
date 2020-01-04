@@ -22,7 +22,20 @@ const userSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    points: {
+        type: Number,
+        default: 0
+    }, 
+    upgrades: {
+        type: Object,
+        default: {
+            computer: 0,
+            developers: 0,
+            brain: 0
+        }
     }
+
 })
 
 module.exports = mongoose.model('User', userSchema)
