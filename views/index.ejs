@@ -96,13 +96,44 @@
         
         </nav>
 
-        <!-- -------- Menus -------- -->
+        <!-- Main Area -->
+        <div class="uk-flex uk-flex-column uk-flex-middle" style="height: 100%">
+
+            <div style="margin: 50px;" id='counter'>0 Lines of Code</div>
+
+            <div class="uk-flex uk-flex-between" style="width: 100%;">
+                <div style="width: 100%; display: flex; justify-content: space-around;">
+
+                    <button class="mainButton">
+                        <div>
+                            <ion-icon name="cart" size="large"></ion-icon>
+                            <p class="buttonText">SHOP</p>
+                        </div>
+                    </button>
+
+                    <!-- ------ CickerImg ------ -->
+                    <img src='Assets/OldComputer.png' id='clicker' onclick="clicked()" class="clickerImage"/>
+
+                    <button class="mainButton">
+                        <div>
+                            <ion-icon name="hammer" size="large"></ion-icon>
+                            <p class="buttonText">UPGRADES</p>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- OLD CODE -->
 
         <!-- This is a button toggling the off-canvas LEFT -->
-        <button uk-toggle="target: #left-menu" type="button">Shop</button>
+        <!-- <button uk-toggle="target: #left-menu" type="button">Shop</button> -->
 
         <!-- This is a button toggling the off-canvas RIGHT -->
-        <button uk-toggle="target: #right-menu" type="button">Upgrades</button>
+        <!-- <button uk-toggle="target: #right-menu" type="button">Upgrades</button>
 
         <div id="left-menu" uk-offcanvas>
             <div class="uk-offcanvas-bar">
@@ -122,23 +153,7 @@
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
                 <div id="upgrades"></div>
             </div>
-        </div>
-        
-        <!-- ------ CickerImg ------ -->
-        <div id='counter'></div>
-        <!-- <script>
-
-        let value = 0
-        
-        function updateCounter() {
-            counter = document.getElementById("counter")
-            value = value + 1
-            counter.innerHTML = value
-            console.log("Count = " + value)
-        }
-        </script> -->
-
-        <img src='Assets/OldComputer.png' id='clicker' onclick="clicked()" class="clickerImage"/>
+        </div> -->
 
     </main>
   </body>
