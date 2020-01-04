@@ -1,35 +1,11 @@
-import axios from "axios";
-import { getCookie, setCookie } from "..helpers/cookie.js";
+import axios from "axios"
+import { getCookie, setCookie } from "..helpers/cookie.js"
 
-document.addEventListener("DOMContententLoaded", async () => {
-  await getUserData();
-  loadGame();
+document.addEventListener("DOMContententLoaded", () => {
   setInterval(() => {
-    saveGame();
-  }, 30000);
-});
-
-// get and store the user game data.
-function getUserData() {
-  axios
-    .request("/user/gameData", {
-      method: "get",
-      header: {
-        authToken: authToken
-      }
-    })
-    .then(res => {
-      window.gameData = res.body;
-    });
-}
-
-// render game data.
-function loadGame() {
-  counter = document.getElementById("counter");
-  counter.textContent = gameData.points;
-
-  // render upgrades
-}
+    saveGame()
+  }, 30000)
+})
 
 // saves the game to server
 function saveGame() {
@@ -38,6 +14,8 @@ function saveGame() {
     header: {
       authToken: authToken
     },
-    data: {}
-  });
+    data: {
+      ...gameData
+    }
+  })
 }

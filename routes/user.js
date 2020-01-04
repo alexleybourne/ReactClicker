@@ -15,7 +15,8 @@ router.get('/user/gameData', verify, (req,res) => {
 
   // return it in JSON
   res.json({
-    game
+    points: user.points,
+    upgrades: user.upgrades
   })
 })
 

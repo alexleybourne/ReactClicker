@@ -37,6 +37,8 @@
     <!-- My StyleSheet CSS -->
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
 
+    <!-- Anime JS -->
+    <script src="anime.min.js"></script>
     
     <!-- UI KIT -->
 
@@ -63,17 +65,19 @@
         <div id="left-menu" uk-offcanvas>
             <div class="uk-offcanvas-bar">
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div id="shop"></div>
             </div>
         </div>
 
         <div id="right-menu"  uk-offcanvas="flip: true">
             <div class="uk-offcanvas-bar">
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div id="your-team"></div>
             </div>
         </div>
 
         <!-- ------ CickerImg ------ -->
-        <div id='counter'></div>
+        <div id='counter'><%= </div>
         <script>
 
         let value = 0
@@ -86,7 +90,7 @@
         }
         </script>
 
-        <img src='../Assets/OldComputer.png' id='clicker' onclick="updateCounter()" class="clickerImage" />
+        <img src='../Assets/OldComputer.png' id='clicker' onclick="updateCounter()" class="clickerImage"/>
 
     </main>
   </body>
