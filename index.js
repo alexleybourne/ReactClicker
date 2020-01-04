@@ -7,6 +7,10 @@ const mongoose = require('mongoose')
 const authRoute = require('./routes/auth')
 const postRoute = require('./routes/posts')
 const userRoute = require('./routes/user')
+const indexRoute = require('./routes/index')
+
+// render documents with ejs
+app.set('view engine', 'ejs');
 
 dotenv.config()
 
@@ -17,11 +21,11 @@ process.env.DB_CONNECT,
 () => console.log('Connected to DB') 
 )
 
-
 // Middleware
 app.use(express.json())
 
 // Route Middlewares
+app.use('/', indexRoute)
 app.use('/api/user', authRoute)
 app.use('/api/posts', postRoute)
 app.use('/api/user', userRoute)
