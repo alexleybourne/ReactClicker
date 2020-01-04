@@ -55,10 +55,10 @@
         <!-- -------- Menus -------- -->
 
         <!-- This is a button toggling the off-canvas LEFT -->
-        <button uk-toggle="target: #left-menu" type="button"></button>
+        <button uk-toggle="target: #left-menu" type="button">Shop</button>
 
         <!-- This is a button toggling the off-canvas RIGHT -->
-        <button uk-toggle="target: #right-menu" type="button"></button>
+        <button uk-toggle="target: #right-menu" type="button">Your Team</button>
 
         <div id="left-menu" uk-offcanvas>
             <div class="uk-offcanvas-bar">
@@ -73,8 +73,20 @@
         </div>
 
         <!-- ------ CickerImg ------ -->
-        <div id='counter'>0</div>
-        <img src='' id='clicker' />
+        <div id='counter'></div>
+        <script>
+
+        let value = 0
+        
+        function updateCounter() {
+            counter = document.getElementById("counter")
+            value = value + 1
+            counter.innerHTML = value
+            console.log("Count = " + value)
+        }
+        </script>
+
+        <img src='../Assets/OldComputer.png' id='clicker' onclick="updateCounter()" class="clickerImage" />
 
     </main>
   </body>

@@ -27,3 +27,4 @@ app.use('/api/posts', postRoute)
 app.use('/api/user', userRoute)
 
 app.listen(3000, () => console.log('Server is up and Running!'))
+

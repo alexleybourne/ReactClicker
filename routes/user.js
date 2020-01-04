@@ -1,9 +1,8 @@
 const router = require('express').Router()
 const verify = require('./verifyToken') 
+const UserModel = require("../model/User");
 
-router.get('/', verify, (req,res) => {
-
-  console.log(req.user.id)
+router.get('/', verify, async(req,res) => {
 
   res.json({
     data: true
@@ -12,12 +11,11 @@ router.get('/', verify, (req,res) => {
 
 router.get('/user/gameData', verify, (req,res) => {
   // get gameData from mongoDB
-
-  console.log(req.user)
+  let user = await UserModel.findById(req.user._id)
 
   // return it in JSON
   res.json({
-    data: true
+    game
   })
 })
 
