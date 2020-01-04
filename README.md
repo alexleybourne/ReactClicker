@@ -9,7 +9,7 @@ Link to Deployment:
 
 This is a basic clicker style game made with Html, JS and Node JS
 
-Created by [Alex Leybourne](https://www.alexleybourne.com/) and [Nicolas Jensen]([https://github.com/NicolasJJensen](https://github.com/NicolasJJensen))
+Created by [Alex Leybourne](https://www.alexleybourne.com/) and [Nicolas Jensen](https://github.com/NicolasJJensen)
 
 Enjoy :smile:
 
