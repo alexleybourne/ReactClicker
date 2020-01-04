@@ -13,3 +13,21 @@ function clicked(){
       })
 }
 
+// Mouse Hover Button Animation
+function enterClicker() { 
+    anime({
+        targets: ".clickerImage",
+        scale: 1.2,
+        elasticity: 10
+      })
+}
+
+function leaveClicker() { 
+    anime({
+        targets: ".clickerImage",
+        scale: 1.0,
+        elasticity: 10
+      })
+}
+
+
