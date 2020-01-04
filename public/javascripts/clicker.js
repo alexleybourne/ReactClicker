@@ -6,13 +6,11 @@ function clicked(){
 
     anime({
         targets: '.clickerImage',
-        keyframes: [
-            {scale: 1.2},
-            {scale: 1}
-          ],
-          duration: 800,
-          easing: 'easeOutElastic(1, .8)'
-    })
+        scale: [
+            { value: 1.1, duration: 10, delay: 50 },
+            { value: 1, duration: 10, delay: 50 }
+        ]
+      })
 
 }
 

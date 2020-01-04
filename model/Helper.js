@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const helperSchema = new mongoose.Schema({
+const HelperSchema = new mongoose.Schema({
   name: {
       type: String,
       required: true,
@@ -21,4 +21,4 @@ const helperSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Helper', userSchema)
+module.exports = HelperSchema
