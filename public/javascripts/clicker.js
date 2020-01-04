@@ -11,13 +11,5 @@ function clicked(){
             { value: 1, duration: 10, delay: 50 }
         ]
       })
-
 }
 
-anime({
-    targets: '.clickerImage',
-    translateX: 250,
-    rotate: '1turn',
-    backgroundColor: '#FFF',
-    duration: 800
-  })

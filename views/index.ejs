@@ -50,11 +50,52 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
 
+    <!-- Ion -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </head>
   <body>
     <nav></nav>
 
     <main>
+
+        <!------ Nav Bar ------>
+
+        <nav class="uk-navbar-container" style="padding: 0 20px; background-color: rgb(75, 75, 75);" uk-navbar>
+
+            <div class="uk-navbar-left">
+        
+                <ul class="uk-navbar-nav">
+                    <li><a href="#"><ion-icon name="trophy" ></ion-icon><b>&nbsp;Scoreboard</b></a></li>
+                    <li><a href="#"><ion-icon name="ribbon" ></ion-icon><b>&nbsp;1st</b></a></li>
+                </ul>
+        
+            </div>
+
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-item uk-logo"><img style="height: 70px;" src="Assets/logo.png"></div>
+            </div>
+        
+            <div class="uk-navbar-right">
+        
+                <ul class="uk-navbar-nav">
+                    <li><a href="" ><ion-icon name="save"></ion-icon><b>&nbsp;Save</b></a></li>
+                    <li>
+                        <a href="" ><ion-icon name="person"></ion-icon><b>&nbsp;User</b></a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="#">Edit</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+        
+            </div>
+        
+        </nav>
+
         <!-- -------- Menus -------- -->
 
         <!-- This is a button toggling the off-canvas LEFT -->
@@ -82,7 +123,7 @@
                 <div id="upgrades"></div>
             </div>
         </div>
-
+        
         <!-- ------ CickerImg ------ -->
         <div id='counter'></div>
         <!-- <script>
