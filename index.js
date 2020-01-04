@@ -25,7 +25,7 @@ process.env.DB_CONNECT,
 app.use(express.json())
 
 // Images
-app.use('/Assets', express.static(__dirname + '/Assets'));
+app.use(express.static('public'))
 
 // Route Middlewares
 app.use('/', indexRoute)

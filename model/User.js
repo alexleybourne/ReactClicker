@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    upgrades: {
+    team: {
         type: Object,
         default: {
             computer: 0,
@@ -35,7 +35,6 @@ const userSchema = new mongoose.Schema({
             brain: 0
         }
     }
-
 })
 
 module.exports = mongoose.model('User', userSchema)
