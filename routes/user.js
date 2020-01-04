@@ -2,11 +2,9 @@ const router = require('express').Router()
 const verify = require('./verifyToken') 
 
 router.get('/', verify, (req,res) => {
-    res.json({
-        posts: {
-            title: 'my first post', 
-            description: 'wassup my homie' }
-    })
+  res.json({
+    data: true
+  })
 })
 
 module.exports = router
