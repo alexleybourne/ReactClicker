@@ -10,7 +10,7 @@ function clicked(){
             { value: 1.1, duration: 10, delay: 50 },
             { value: 1, duration: 10, delay: 50 }
         ]
-      })
+    })
 }
 
 // Mouse Hover Button Animation
