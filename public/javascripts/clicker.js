@@ -1,4 +1,5 @@
 let count = 0
+let currentClicker = "Assets/OldComputer.png"
 
 function pageLoaded(){
     console.log("Page Loaded")
@@ -18,12 +19,24 @@ function updateCount(){
         ]
     })
 
+    // Update Clicker
+    if (count > 19) {
+        currentClicker = "Assets/MidComputer.png"
+        document.getElementById("clicker").src = currentClicker
+    }
+
+}
+
+function spawnItem() {
+    let spawnArea = document.getElementById("spawnedItems").innerHTML
+    spawnArea = `<img src=${currentClicker} class="spawnedObject" >`
 }
 
 function clicked(){
     console.log("Clicked")
 
     updateCount()
+    spawnItem()
 
     anime({
         targets: '.clickerImage',
@@ -50,6 +63,8 @@ function leaveClicker() {
         elasticity: 10
       })
 }
+
+
 
 
 
