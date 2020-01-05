@@ -54,7 +54,7 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </head>
-  <body>
+  <body onload="pageLoaded()">
     <nav></nav>
 
     <main>
@@ -98,7 +98,7 @@
         <!-- Main Area -->
         <div class="uk-flex uk-flex-column uk-flex-middle" style="height: 100%">
 
-            <div style="margin: 50px;" id='counter'>0 Lines Coded</div>
+            <div style="margin: 50px;" id='counter' class="counter" >0 Lines Coded</div>
 
             <div class="uk-flex uk-flex-between" style="width: 100%;">
                 <div style="width: 100%; display: flex; justify-content: space-around;">
@@ -106,7 +106,7 @@
                     <!-- SHOP BUTTON -->
                     <button class="mainButton">
                         <div>
-                            <ion-icon name="cart" size="large"></ion-icon>
+                            <ion-icon class="buttonIcon" name="cart" size="large"></ion-icon>
                             <p class="buttonText">SHOP</p>
                         </div>
                     </button>
@@ -117,7 +117,7 @@
                     <!-- UPGRADES BUTTON -->
                     <button class="mainButton">
                         <div>
-                            <ion-icon name="hammer" size="large"></ion-icon>
+                            <ion-icon class="buttonIcon" name="hammer" size="large"></ion-icon>
                             <p class="buttonText">UPGRADES</p>
                         </div>
                     </button>

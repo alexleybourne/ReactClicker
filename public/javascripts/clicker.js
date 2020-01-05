@@ -1,8 +1,27 @@
+let count = 0
 
-console.log("Clicker JS Loaded")
+function pageLoaded(){
+    console.log("Page Loaded")
+}
+
+function updateCount(){
+    count++
+    document.getElementById('counter').innerHTML = count + " Lines Coded"
+
+    anime({
+        targets: '.counter',
+        scale: [
+            { value: 1.2, duration: 10, delay: 50 },
+            { value: 1, duration: 10, delay: 50 }
+        ]
+    })
+
+}
 
 function clicked(){
     console.log("Clicked")
+
+    updateCount()
 
     anime({
         targets: '.clickerImage',
@@ -29,5 +48,6 @@ function leaveClicker() {
         elasticity: 10
       })
 }
+
 
 
