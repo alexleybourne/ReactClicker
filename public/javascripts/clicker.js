@@ -8,6 +8,8 @@ function updateCount(){
     count++
     document.getElementById('counter').innerHTML = count + " Lines Coded"
 
+    document.title = "Dev Clicker - " + count + " Lines Coded"
+
     anime({
         targets: '.counter',
         scale: [
