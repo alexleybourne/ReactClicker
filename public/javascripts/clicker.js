@@ -27,24 +27,41 @@ function updateCount(){
 
 }
 
-let spawnedItems = 0
-
+// Nics Genius Spawn Pawn
 function spawnItem() {
-    let maxSpawnedItems = 10
-    spawnedItems ++
+    let maxSpawnedItems = 40
+    let spawnArea = document.getElementById("spawnedItems")
 
-    if (spawnedItems > maxSpawnedItems) {
-        spawnedItems --
-        let spawnArea = document.getElementById("spawnedItems")
+    if (spawnArea.children.length > maxSpawnedItems) {
         spawnArea.removeChild(spawnArea.children[spawnArea.children.length - 1])
     }
 
-    let spawnArea = document.getElementById("spawnedItems")
     let img = document.createElement('img')
-    console.log(img)
     img.src = currentClicker
     img.classList.add('spawnedObject')
     spawnArea.insertBefore(img, spawnArea.children[0])
+
+    let randVal = Math.random()
+    let size = randVal*(200 - 50) + 50
+    let speed = (1-randVal)*2+1
+    let zIndex = Math.round(randVal)
+    let blur = randVal*4
+    let left = Math.random()*80
+    let delay = Math.random()*0.75
+    let rotation = Math.random()*270-135
+
+    img.classList.add('particle')
+    img.style.setProperty('--rotation', `${rotation}deg`);
+    img.style.animationDuration = `${speed}s`
+    img.style.filter = `blur(${blur}px)`
+    img.style.left = `${left}%`
+    img.style.zIndex = zIndex*3 - 1
+    img.style.width = `${size}px`
+    img.style.height = `${size}px`
+    img.style.animationDelay = `${delay}s`
+    setTimeout(() => {
+      Array.from(spawnArea.children).includes(img) && spawnArea.removeChild(img)
+    }, (speed+delay)*1000)
 }
 
 function clicked(){

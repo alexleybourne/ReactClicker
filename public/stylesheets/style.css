@@ -140,6 +140,14 @@ button:focus {
   animation-duration: 11s;
 }
 
+.particle {
+  top: 0%;
+  position: absolute;
+  transform: translateY(-100%) rotate(0deg);
+  animation-name: particle;
+  animation-timing-function: ease-out;
+  pointer-events: none;
+}
 
 
 @keyframes animate {
@@ -156,5 +164,16 @@ button:focus {
       border-radius: 50%;
   }
 
+}
+
+@keyframes particle {
+  from {
+    top: 0%;
+    transform: translateY(-100%) rotate(0deg);
+  }
+  to {
+    top: 150%;
+    transform: translateY(0%) rotate(var(--rotation));
+  }
 }
 
