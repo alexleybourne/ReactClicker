@@ -27,9 +27,24 @@ function updateCount(){
 
 }
 
+let spawnedItems = 0
+
 function spawnItem() {
-    let spawnArea = document.getElementById("spawnedItems").innerHTML
-    spawnArea = `<img src=${currentClicker} class="spawnedObject" >`
+    let maxSpawnedItems = 10
+    spawnedItems ++
+
+    if (spawnedItems > maxSpawnedItems) {
+        spawnedItems --
+        let spawnArea = document.getElementById("spawnedItems")
+        spawnArea.removeChild(spawnArea.children[spawnArea.children.length - 1])
+    }
+
+    let spawnArea = document.getElementById("spawnedItems")
+    let img = document.createElement('img')
+    console.log(img)
+    img.src = currentClicker
+    img.classList.add('spawnedObject')
+    spawnArea.insertBefore(img, spawnArea.children[0])
 }
 
 function clicked(){
