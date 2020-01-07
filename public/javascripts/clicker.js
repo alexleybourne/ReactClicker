@@ -79,6 +79,7 @@ function clicked(){
     })
 }
 
+
 // Mouse Hover Button Animation
 function enterClicker() { 
     anime({
@@ -96,6 +97,14 @@ function leaveClicker() {
       })
 }
 
+// Shop Page Options
+function shopButtonClose(){
+    
+}
+
+function shopButtonClick(){
+
+}
 
 
 

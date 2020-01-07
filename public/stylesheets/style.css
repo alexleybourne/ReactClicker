@@ -1,4 +1,7 @@
 
+body {
+  overflow: hidden;
+}
 
 .mainButton {
   border-radius: 100px;
@@ -35,6 +38,36 @@
 button:focus {
   outline:0;
 }
+
+.closeButton {
+  position: absolute;
+  color: white;
+  height: 30px;
+  width: 30px;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.closeButton:hover {
+  color: white;
+  transform: rotate(180deg);
+}
+
+.blurred {
+  filter: blur(10px);
+}
+
+.shopMenu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.438);
+}
+
 
 /* Animated Background */
 /* https://codepen.io/mohaiman/pen/MQqMyo */

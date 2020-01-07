@@ -61,7 +61,7 @@
 
         <!------ Nav Bar ------>
 
-        <nav class="uk-navbar-container" style="padding: 0 20px; background-color: rgb(75, 75, 75); z-index: 4;" uk-navbar>
+        <nav class="uk-navbar-container" style="padding: 0 20px; background-color: rgb(75, 75, 75); z-index: 10;" uk-navbar>
 
             <div class="uk-navbar-left">
         
@@ -95,8 +95,19 @@
         
         </nav>
 
+
+        <div id="shopMenu" class="shopMenu">
+
+            <h1 style="color: white;"> Shop </h1>
+            <button class="closeButton" onclick="shopButtonClose()"><ion-icon name="close"></ion-icon></button>
+
+        </div>
+
+
+
+
         <!-- Main Area -->
-        <div class="uk-flex uk-flex-column uk-flex-middle" style="height: 100%">
+        <div class="uk-flex uk-flex-column uk-flex-middle blurred" style="height: 100%">
 
             <b><div style="margin: 50px;" id='counter' class="counter" >0 Lines Coded</div></b>
 
@@ -104,7 +115,7 @@
                 <div style="width: 100%; display: flex; justify-content: space-around;">
 
                     <!-- SHOP BUTTON -->
-                    <button class="mainButton">
+                    <button class="mainButton" onclick="shopButtonClick()">
                         <div>
                             <ion-icon class="buttonIcon" name="cart" size="large"></ion-icon>
                             <p class="buttonText">SHOP</p>
@@ -126,6 +137,7 @@
             </div>
         </div>
         
+        <!-- Particle Animations on CLick -->
         <div id="spawnedItems">
         </div>
 
