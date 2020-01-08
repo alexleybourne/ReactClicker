@@ -16,7 +16,7 @@ dotenv.config()
 
 // Connect to Database
 mongoose.connect(
-  process.env.DB_CONNECT, 
+  process.env.DB_CONNECT,
   { useNewUrlParser: true },
   () => console.log('Connected to DB') 
 )
@@ -33,4 +33,4 @@ app.use('/api/user', authRoute)
 app.use('/api/posts', postRoute)
 app.use('/api/user', userRoute)
 
-app.listen(3000, () => console.log('Server is up and Running!'))
+app.listen(process.env.PORT || 3000, () => console.log('Server is up and Running!'))
