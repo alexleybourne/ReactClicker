@@ -35,7 +35,7 @@
     <link rel="manifest" href="Assets/favicon/site.webmanifest">
 
     <!-- My StyleSheet CSS -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 
     <!-- Anime JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
@@ -98,8 +98,32 @@
         <!-- Shop Menu -->
         <div id="shopMenu" class="shopMenu">
 
-            <h1 style="color: white; cursor: pointer;" onclick="shopButtonClose()"><ion-icon name="cart" class="shopIcon"></ion-icon> Shop </h1>
-            <ion-icon name="close" class="closeButton" onclick="shopButtonClose()"></ion-icon>
+            <h1 style="cursor: pointer; padding-top: 10px;" onclick="shopButtonClose()"><ion-icon name="cart" class="shopIcon"></ion-icon> Shop <ion-icon name="close" class="closeButton" onclick="shopButtonClose()"></ion-icon></h1>
+            
+
+            <!-- Animated Background for Main-->
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+
+        </div>
+
+
+
+        <!-- Upgrades Menu -->
+        <div id="upgradeMenu" class="upgradeMenu">
+
+            <h1 style="cursor: pointer; padding-top: 10px;" onclick="upgradeButtonClose()"><ion-icon name="hammer" class="shopIcon"></ion-icon> Upgrades <ion-icon name="close" class="closeButton" onclick="upgradeButtonClose()"></ion-icon></h1>
+            
 
             <!-- Animated Background for Main-->
             <ul class="circles">
@@ -140,7 +164,7 @@
                     <img src='Assets/OldComputer.png' id='clicker' onclick="clicked()" onmouseover="enterClicker()" onmouseleave="leaveClicker()" class="clickerImage"/>
 
                     <!-- UPGRADES BUTTON -->
-                    <button class="mainButton">
+                    <button class="mainButton" onclick="upgradeButtonClick()">
                         <div>
                             <ion-icon class="buttonIcon" name="hammer" size="large"></ion-icon>
                             <p class="buttonText">UPGRADES</p>
