@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const HelperSchema = require("./Helper");
+const Save = require("./Save");
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -24,11 +24,7 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  points: {
-    type: Number,
-    default: 0
-  },
-  helpers: [HelperSchema]
+  saves: [Save]
 });
 
 module.exports = mongoose.model("User", UserSchema);
