@@ -5,6 +5,10 @@ function pageLoaded(){
     console.log("Page Loaded")
 }
 
+function darkMode(){
+    console.log("Dark Mode Clicked")
+}
+
 function updateCount(){
     count++
     document.getElementById('counter').innerHTML = count + " Lines Coded"
