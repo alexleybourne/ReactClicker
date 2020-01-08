@@ -14,7 +14,7 @@ const GameSchema = new mongoose.Schema({
   upgrades: [Upgrade],
   creator: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user"
+    ref: "User"
   }
 })
 

@@ -13,7 +13,7 @@ const AutoResourcerUpgrade = new mongoose.Schema({
   },
   autoResourcer: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "autoResourcer"
+    ref: "AutoResourcer"
   }
 })
 

@@ -21,7 +21,7 @@ const BuffsResource = new mongoose.Schema({
   },
   resource: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "resource"
+    ref: "Resource"
   }
 })
 
