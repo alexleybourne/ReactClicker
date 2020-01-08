@@ -5,8 +5,28 @@ function pageLoaded(){
     console.log("Page Loaded")
 }
 
+// Dark & Light Mode Button
 function darkMode(){
     console.log("Dark Mode Clicked")
+    let button = document.getElementById('darkModeButton')
+    let text = document.getElementById('darkModeText')
+    let stylesRoot = document.documentElement;
+
+    if (text.innerHTML == "&nbsp;Dark") {
+        // Dark Values
+        button.innerHTML = `<a class="white"><ion-icon name="sunny"></ion-icon><b id="darkModeText">&nbsp;Light</b></a>`
+        stylesRoot.style.setProperty('--bg-color', "rgba(24, 24, 24, 0.918)")
+        stylesRoot.style.setProperty('--text-color', "rgba(255, 255, 255, 0.863)")
+        stylesRoot.style.setProperty('--button-bg-color', "rgba(255, 255, 255, 0.164)")
+        stylesRoot.style.setProperty('--circle-color', "rgba(160, 160, 160, 0.315)")
+    } else {
+        // Normal Value
+        button.innerHTML = `<a class="white"><ion-icon name="moon"></ion-icon><b id="darkModeText">&nbsp;Dark</b></a>`
+        stylesRoot.style.setProperty('--bg-color', "none")
+        stylesRoot.style.setProperty('--text-color', "rgba(36, 36, 36, 0.863)")
+        stylesRoot.style.setProperty('--button-bg-color', "rgba(255, 255, 255, 0.164)")
+        stylesRoot.style.setProperty('--circle-color', "rgba(231, 231, 231, 0.801)")
+    }
 }
 
 function updateCount(){

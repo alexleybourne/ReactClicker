@@ -2,20 +2,12 @@
   --bg-color: none;
   --text-color: rgba(36, 36, 36, 0.863);
   --button-bg-color: rgba(255, 255, 255, 0.164);
-  --circle-color: rgba(0, 0, 0, 0.315);
+  --circle-color: rgba(231, 231, 231, 0.315);
 }
 
-/* Normal Mode Values */
-/* --bg-color: rgba(255, 255, 255, 0.815);
---text-color: rgba(36, 36, 36, 0.863);
---button-bg-color: rgba(255, 255, 255, 0.164);
---circle-color: rgba(0, 0, 0, 0.315); */
-
-/* Dark Mode Values */
-/* --bg-color: rgba(24, 24, 24, 0.918);
---text-color: rgba(255, 255, 255, 0.863);
---button-bg-color: rgba(255, 255, 255, 0.164);
---circle-color: rgba(160, 160, 160, 0.315); */
+.white {
+  color: white !important;
+}
 
 body {
   overflow: hidden;
