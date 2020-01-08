@@ -95,11 +95,25 @@
         
         </nav>
 
-
+        <!-- Shop Menu -->
         <div id="shopMenu" class="shopMenu">
 
-            <h1 style="color: white;"> Shop </h1>
+            <h1 style="color: white; cursor: pointer;" onclick="shopButtonClose()"><ion-icon name="cart" class="shopIcon"></ion-icon> Shop </h1>
             <ion-icon name="close" class="closeButton" onclick="shopButtonClose()"></ion-icon>
+
+            <!-- Animated Background for Main-->
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
 
         </div>
 
@@ -107,7 +121,7 @@
 
 
         <!-- Main Area -->
-        <div class="uk-flex uk-flex-column uk-flex-middle mainArea" id="mainArea" style="height: 100%">
+        <div class="uk-flex uk-flex-column uk-flex-middle mainArea" id="mainArea">
 
             <b><div style="margin: 50px;" id='counter' class="counter" >0 Lines Coded</div></b>
 
@@ -133,28 +147,33 @@
                         </div>
                     </button>
 
+
+
                 </div>
             </div>
+
+             <!-- Particle Animations on CLick -->
+            <div id="spawnedItems">
+            </div>
+
+            <!-- Animated Background for Main-->
+            <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+
         </div>
+
         
-        <!-- Particle Animations on CLick -->
-        <div id="spawnedItems">
-        </div>
-
-
-        <!-- Animated Background -->
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        
 
 
         <!-- OLD CODE -->

@@ -103,13 +103,13 @@ function leaveClicker() {
 function shopButtonClose(){
     console.log('closeButton')
     document.getElementById("shopMenu").setAttribute("style", "transform: translateX(-100%);")
-    document.getElementById("mainArea").setAttribute("style", "filter: blur(0px)")
+    document.getElementById("mainArea").setAttribute("style", "transform: translateX(0);")
 }
 
 function shopButtonClick(){
     console.log('openButton')
-    document.getElementById("shopMenu").setAttribute("style", "transform: translateX(0%);")
-    document.getElementById("mainArea").setAttribute("style", "filter: blur(10px)")
+    document.getElementById("shopMenu").setAttribute("style", "transform: translateX(0);")
+    document.getElementById("mainArea").setAttribute("style", "transform: translateX(100%);")
 }
 
 
